@@ -2,7 +2,7 @@
 
 Navigation colors app/styles/components/_navigation.scss
 $nav-background: $grey;
-$nav-text-color: $white;
+$nav-text-color: white;
 
 Colors in app/styles/base/_variables.scss
 $grey: #333333;
