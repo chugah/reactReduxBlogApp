@@ -1,1 +1,1 @@
-React Timer Application
+React Timer/Countdown Application
