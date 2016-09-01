@@ -27,3 +27,7 @@ imports in app/styles/app.scss
 	padding: 0;
 }
 
+.top-bar .active-link {
+	font-weight: bold;
+}
+
