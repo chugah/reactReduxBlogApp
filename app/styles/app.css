@@ -11,6 +11,8 @@ $white: ;
 imports in app/styles/app.scss
 @import "base/variables";
 @import "components/navigation";
+@import "components/clock";
+@import "components/controls";
 
 Clock variables
 app/styles/components/_clock.scss
@@ -52,5 +54,18 @@ border: $clock-border-color: ;
 	color: white;
 	font-size: 2.25rem;
 	font-weight: 300;
+}
+
+.controls {
+	display: flex;
+	justify-content: center;
+}
+
+.button {
+	padding: .75rem 3rem;
+}
+
+.button:first-child {
+	margin-right: 1.5rem;
 }
 
