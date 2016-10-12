@@ -10,10 +10,19 @@ $white: ;
 
 imports in app/styles/app.scss
 @import "base/variables";
+
+FOR FOUNDATION - SASS
+@import "base/foundation-settings";
+@import "foundation";
+@include foundation-everything;
+
+FOR COMPONENTS
 @import "components/navigation";
 @import "components/clock";
 @import "components/controls";
 @import "components/page-title";
+
+
 
 Clock variables
 app/styles/components/_clock.scss

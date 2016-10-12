@@ -1,4 +1,5 @@
 var webpack = require('webpack');
+// var path = require('path'); if using sass need to include path
 
 module.exports = {
 	entry: [
@@ -22,14 +23,15 @@ module.exports = {
 	resolve: {
 		root: __dirname,
 		alias: {
-			Main: 'app/components/Main.jsx',
+			routes: 'app/routes.jsx',
 			applicationStyles: 'app/styles/app.css',
+			main: 'app/components/Main.jsx',
 			Navigation: 'app/components/Navigation.jsx',
-			Timer: 'app/components/Timer.jsx',
-			Countdown: 'app/components/Countdown.jsx',
-			Clock: 'app/components/Clock.jsx',
-			CountdownForm: 'app/components/CountdownForm.jsx',
-			Controls: 'app/components/Controls.jsx'					
+			posts_index: 'app/components/posts_index.jsx',
+			posts_new: 'app/components/posts_new.jsx',
+			reducers: 'app/reducers/reducers_index.jsx',
+			reducers_posts: 'app/reducers/reducers_posts.jsx',
+			actions_index: 'app/actions/actions_index.jsx'					
 		},
 		extensions: ['', '.js', '.jsx']
 	},
