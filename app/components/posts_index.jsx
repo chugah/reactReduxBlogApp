@@ -7,18 +7,39 @@ class PostsIndex extends Component {
 	componentWillMount() {
 		this.props.fetchPosts();
 	}
+	renderPosts() {
+		return this.props.posts.map((post) => {
+			return (
+				<div className="row">
+					<Link to={"posts/" + post.id}>
+						<div className="small-6 columns" key={post.id}>
+							<strong>{post.title}</strong>
+						</div>
+						<div className="small-6 columns">
+							{post.categories}
+						</div>
+					</Link>
+				</div>
+			);
+		});
+	}
 	render() {
 		return (
 			<div>
-				<div className="text-xs-right">
-					<Link to="/posts/new" className="button primary">
+				<div>
+					<Link to="/posts/new" className="button small">
 						Add a Post
 					</Link>
 				</div>
-			List of blog posts
+				<h3>Posts</h3>
+				{this.renderPosts()}
 			</div>
 		);
 	}
 }
 
-export default connect(null, { fetchPosts })(PostsIndex);
+function mapStateToProps(state) {
+	return { posts: state.posts.all };
+}
+
+export default connect(mapStateToProps, { fetchPosts })(PostsIndex);

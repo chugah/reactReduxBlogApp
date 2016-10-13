@@ -25,13 +25,14 @@ module.exports = {
 		alias: {
 			routes: 'app/routes.jsx',
 			applicationStyles: 'app/styles/app.css',
-			main: 'app/components/Main.jsx',
-			Navigation: 'app/components/Navigation.jsx',
-			posts_index: 'app/components/posts_index.jsx',
-			posts_new: 'app/components/posts_new.jsx',
-			reducers: 'app/reducers/reducers_index.jsx',
-			reducers_posts: 'app/reducers/reducers_posts.jsx',
-			actions_index: 'app/actions/actions_index.jsx'					
+			main: 'app/components/Main',
+			Navigation: 'app/components/Navigation',
+			posts_index: 'app/components/posts_index',
+			posts_new: 'app/components/posts_new',
+			posts_show: 'app/components/posts_show',
+			reducers: 'app/reducers/reducers_index',
+			reducers_posts: 'app/reducers/reducers_posts',
+			actions_index: 'app/actions/actions_index'					
 		},
 		extensions: ['', '.js', '.jsx']
 	},
