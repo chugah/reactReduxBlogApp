@@ -7,7 +7,7 @@ import PostsNew from 'posts_new';
 export default (
 	<Route path="/" component={Main}>
 		<IndexRoute component={PostsIndex}/>
-		<Route path="posts/new" component={PostsNew} />			
+		<Route path="/posts/new" component={PostsNew} />			
 	</Route>
 );
 

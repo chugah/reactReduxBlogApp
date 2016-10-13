@@ -1,36 +1,8 @@
-/*  
-
-Navigation colors app/styles/components/_navigation.scss
-$nav-background: $grey;
-$nav-text-color: white;
-
-Colors in app/styles/base/_variables.scss
-$grey: #333333;
-$white: ;
-
-imports in app/styles/app.scss
-@import "base/variables";
-
-FOR FOUNDATION - SASS
-@import "base/foundation-settings";
-@import "foundation";
-@include foundation-everything;
-
-FOR COMPONENTS
-@import "components/navigation";
-@import "components/clock";
-@import "components/controls";
-@import "components/page-title";
-
-
-
-Clock variables
-app/styles/components/_clock.scss
-$clock-text-color: white;
-background-color: $clock-bg-color: #B5D0E2;
-border: $clock-border-color: ;
-*/
-
+.text-help {
+	color: red;
+	font-size: 0.7rem;
+	margin-bottom: 0.5rem;
+}
 .top-bar, .top-bar ul {
 	background-color: #333333; 
 }
@@ -48,39 +20,20 @@ border: $clock-border-color: ;
 	font-weight: bold;
 }
 
-.clock {
-	align-items: center;
-	background-color: #B5D0E2;
-	border: 2px solid #2099E8;
-	border-radius: 50%;
-	display: flex;
-	height: 14rem;
-	justify-content: center;
-	margin: 4rem auto;
-	width: 14rem;
-}
-
-.clock-text {
-	color: white;
-	font-size: 2.25rem;
-	font-weight: 300;
-}
-
-.controls {
-	display: flex;
-	justify-content: center;
-}
-
 .button {
+	border-radius: 0.5rem;
 	padding: .75rem 3rem;
+	margin-top: 2rem;
+	margin-right: 1rem;
 }
 
-.button:first-child {
-	margin-right: 1.5rem;
-}
 
 .page-title {
 	margin: 2rem 0;
 	text-align: center;
+}
+
+.row {
+	margin-top: 1rem;
 }
 
