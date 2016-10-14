@@ -14,7 +14,7 @@ class PostsNew extends Component {
 			});
 	}
 	render() {
-		const { fields: { title, categories, description },handleSubmit } = this.props;
+		const { fields: { title, categories, content },handleSubmit } = this.props;
 		return (
 			<form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
 				<h3>Create a New Post</h3>
@@ -41,10 +41,10 @@ class PostsNew extends Component {
 				<div className="row">
 					<div className="large-6 columns">
 						<label>Description
-							<textarea {...description}></textarea>
+							<textarea {...content} />
 						</label>
 						<div className="text-help">
-							{description.touched ? description.error : ''}
+							{content.touched ? content.error : ''}
 						</div>
 					</div>
 				</div>
@@ -63,15 +63,15 @@ function validate (values) {
 	if (!values.categories) {
 		errors.categories = 'A category is required';
 	}
-	if (!values.description) {
-		errors.description = 'A description is required';
+	if (!values.content) {
+		errors.content = 'A description is required';
 	}
 	return errors;
 }
 
 export default reduxForm({
 	form: 'PostsNewForm',
-	fields: ['title', 'categories', 'description'],
+	fields: ['title', 'categories', 'content'],
 	validate
 }, null, { createPost })(PostsNew);
 

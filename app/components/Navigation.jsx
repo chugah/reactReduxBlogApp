@@ -20,4 +20,4 @@ var Navigation = () => {
 	);
 };
 	
-module.exports = Navigation;
+export default Navigation;

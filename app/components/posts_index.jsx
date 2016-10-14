@@ -18,6 +18,9 @@ class PostsIndex extends Component {
 						<div className="small-6 columns">
 							{post.categories}
 						</div>
+						<div className="small-6 columns">
+							{post.content}
+						</div>
 					</Link>
 				</div>
 			);
