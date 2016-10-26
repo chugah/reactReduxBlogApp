@@ -1,4 +1,4 @@
-import { FETCH_POSTS, FETCH_POST } from 'actions_index';
+import { FETCH_POSTS, FETCH_POST, UPDATE_POST } from 'actions_index';
 
 const INITIAL_STATE = { all: [], post: null };
 
@@ -8,6 +8,8 @@ export default function(state = INITIAL_STATE, action) {
 			return { ...state, post: action.payload.data };
 		case FETCH_POSTS:
 			return { ...state, all: action.payload.data };
+		case UPDATE_POST:
+			return { ...state, post: action.payload.data };
 		default:
 			return state;
 	}

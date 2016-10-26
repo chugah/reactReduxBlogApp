@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
-import { fetchPost, deletePost, editPost } from 'actions_index';
+import { fetchPost, deletePost } from 'actions_index';
 import { Link } from 'react-router';
 
 class PostsShow extends Component {
@@ -9,6 +9,9 @@ class PostsShow extends Component {
 	};
 	componentWillMount() {
 		this.props.fetchPost(this.props.params.id);
+		this.setState({
+			post: this.props.post
+		});
 	}
 	onDeleteClick() {
 		this.props.deletePost(this.props.params.id)
@@ -23,20 +26,32 @@ class PostsShow extends Component {
 		}
 		return (
 			<div>
-				<Link to="/">Back to ALL posts</Link>
-				<button 
-					className="button alert"
-					onClick={this.onDeleteClick.bind(this)}>
-					Delete Post
-				</button>
-				<h3>{post.title}</h3>
-				<h6>Categories: {post.categories}</h6>
-				<p>{post.content}</p>
+				<div>
+					<Link to="/">Back to ALL posts</Link>
+				</div>
+				<div>
+					<button 
+						className="button alert"
+						onClick={this.onDeleteClick.bind(this)}>
+						Delete Post
+					</button>
+				</div>
+			    <div>
+			        <Link
+			        	className="button primary"
+			        	to={"/" + post.id + "/edit"}>
+			        	Edit Post
+			        </Link>
+			    </div>
+			    <div className="showbox">
+			        <h3>{this.props.post.title}</h3>
+			        <h6>{this.props.post.categories}</h6>
+			        <p>{this.props.post.content}</p>
+		    	</div>
 			</div>
-		);
+    	);
 	}
 }
-
 function mapStateToProps(state) {
 	return { post: state.posts.post };
 }

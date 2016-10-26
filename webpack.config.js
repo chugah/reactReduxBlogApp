@@ -30,6 +30,7 @@ module.exports = {
 			posts_index: 'app/components/posts_index',
 			posts_new: 'app/components/posts_new',
 			posts_show: 'app/components/posts_show',
+			posts_edit: 'app/components/posts_edit',
 			reducers: 'app/reducers/reducers_index',
 			reducers_posts: 'app/reducers/reducers_posts',
 			actions_index: 'app/actions/actions_index'					
